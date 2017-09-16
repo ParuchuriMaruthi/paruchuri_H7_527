@@ -19,13 +19,15 @@ public class Student implements Comparable {
 	 * student name and surname separated by the whitespace for example:
 	 * fullName = "David Luis";
 	 */
-       public String toString()
-        {
-         return(name+" "+surname);
-        } 
 	private String fullName;
-        
+
+	/**
+	 * student date of birth in "yyyy-MM-dd" format
+	 */
 	private Date birthDate;
+
+
+
 public boolean isValidDate(String birthDate)
 {
 SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
@@ -39,9 +41,7 @@ catch (ParseException e)
 
 	    {
 
-	      errorMessage = "the date you provided is in an invalid date" +
-
-	                              " format.";
+	      errorMessage = "the date you provided is in an invalid date" +" format.";
 
 	      return false;
 	    }
